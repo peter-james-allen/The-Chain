@@ -1,0 +1,8 @@
+.env
+Artists.db
+c.pptx
+log
+ss/**
+images/**
+env/**
+geckodriver.log

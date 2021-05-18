@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Chain - Create a Spotify playlist linking two artists</title>
+	<style>
+	  select {
+	    width:200px;
+	  }
+	</style>
+  </head>
+  <body>
+    <div>
+    <h1>Artists related to {{chosen}}</h1>
+    <ul>
+      {% for r in related %}
+	<li>{{r}}</li>
+      {% endfor %}
+    </ul>
+	</div>
+	<div>
+	<img src="{{ image }}"/>
+	</div>
+  </body>
+</html>

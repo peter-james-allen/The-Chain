@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Chain - Create a Spotify playlist linking two artists</title>
+	<style>
+	  select {
+	    width:200px;
+	  }
+	</style>
+  </head>
+  <body>
+    <form action="/artists">
+        Enter Artist Name:
+        <input type="text" name="artist" placeholder="{{search}}">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <form action="/related">
+	<label for="chosen">Confirm Artist:</label>
+	<select name="chosen" id="chosen">
+      {% for artist in artists.keys() %}
+    <option value="{{ "{}_{}".format(artists[artist],artist) }}">{{ artist }}</option>
+      {% endfor %}
+    </select>
+	<input type="text" name="loops">
+    <input type="submit" value="Confirm">
+    </form>
+  </body>
+</html>
